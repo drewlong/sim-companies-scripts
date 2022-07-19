@@ -50,13 +50,8 @@ refresh_view = () => {
   buildings.forEach((e) => {
     e.setAttribute('top', 0)
     e.setAttribute('left', 0)
+    var div = e.getElementsByTagName('div')[0]
     var child = main.appendChild(e)
-    var imgs = child.getElementsByTagName('img')
-    var img_list = Array.prototype.slice(imgs)
-    img_list.forEach((i) => {
-      console.log(i)
-      i.remove()
-    })
   })
 }
 
