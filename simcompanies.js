@@ -11,8 +11,7 @@
 // @grant        GM_addStyle
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.2/babel.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.js
-// @require      file://C:\Users\calon\Documents\Code\extensions\scripts\simcompanies.js
-// @resource     STYLES file://C:\Users\calon\Documents\Code\extensions\scripts\simcompanies.css
+// @resource     STYLES https://raw.githubusercontent.com/drewlong/sim-companies-scripts/main/simcompanies.css
 // ==/UserScript==
 
 
@@ -51,13 +50,13 @@ refresh_view = () => {
   buildings.forEach((e) => {
     e.setAttribute('top', 0)
     e.setAttribute('left', 0)
-    var imgs = e.getElementsByTagName('img')
+    var child = main.appendChild(e)
+    var imgs = child.getElementsByTagName('img')
     var img_list = Array.prototype.slice(imgs)
     img_list.forEach((i) => {
       console.log(i)
       i.remove()
     })
-    main.appendChild(e)
   })
 }
 
