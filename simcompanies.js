@@ -50,8 +50,8 @@ refresh_view = () => {
   buildings.forEach((e) => {
     e.setAttribute('top', 0)
     e.setAttribute('left', 0)
-    var div = e.getElementsByTagName('div')[0]
-    var child = main.appendChild(e)
+  //  var div = e.getElementsByTagName('div')[0]
+  //  var child = main.appendChild(e)
   })
 }
 
